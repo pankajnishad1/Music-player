@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base rule*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    font-family:  "Poppins", sans-serif;
+}
+
+html,body{
+    font-size: 62.5%;
+    background-color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: .1rem;
+}
+p{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: .1rem;
+}
+/* theme */
+/* layout */
+.container{
+    height: auto;
+    padding: .8rem 2.5rem;
+}
+/* module/reuseable */
+ .icons {
+    height: 5rem;
+    aspect-ratio: 1;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-color3);
+
+    & :active{
+        scale: 1.2;
+    }
+
+}
+
+
+/* states */
+/* .min-con{
+    background-image: linear-gradient(#450202,#000000);
+} */
+.content-section::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+.content-section::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.379);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/* .sidebar{
+} */
