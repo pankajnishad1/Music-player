@@ -4,6 +4,9 @@ const initialState = {
   playstatus:false,
   currdata:[],
   currid:0,
+  currentaudiostatus:0,
+  totaldurationaudio:0,
+  audioprogress:0,
 }
 export const playerSlice = createSlice({
   name: 'player',
@@ -41,11 +44,20 @@ export const playerSlice = createSlice({
       state.currid=state.currdata.length-1;
     }
   },
+  setcurrentaudiostatus:(state,action)=>{
+    state.currentaudiostatus=action.payload;
+  },
+  settotaldurationaudio:(state,action)=>{
+    state.totaldurationaudio=action.payload;
+  },
+  setaudioprogress:(state,action)=>{
+    state.audioprogress=action.payload;
+  }
 },
 
 })
 
 // Action creators are generated for each case reducer function
-export const { currdata , currid ,playaudio,previousaudio,nextaudio,pauseaudio} = playerSlice.actions
+export const { currdata , currid ,playaudio,previousaudio,nextaudio,pauseaudio,setcurrentaudiostatus,settotaldurationaudio,setaudioprogress} = playerSlice.actions
 
 export default playerSlice.reducer

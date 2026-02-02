@@ -5,9 +5,9 @@ import { LuLibrary } from 'react-icons/lu'
 
 function Sidebar() {
   return (
-    <div className=' max-h-[1580px] px-10 py-8 h-screen  flex flex-col justify-between'>
+    <div className=' max-h-[1580px] bg-[#0f0e0e]  px-10 py-8 h-screen  flex flex-col justify-between'>
         <div className='my-5'>
-            <h3 className='text-slate-500 '>YOUR COLLECTION</h3>
+            <h3 className='text-slate-500 text-2xl '>YOUR COLLECTION</h3>
                  <NavLink to='YourLibrary' >
                     {(status)=>{
                         return <div className={[`h-14 flex gap-3 items-center text-2xl tracking-widest mt-5 p-2 rounded-xl ${status.isActive?"bg-white":"text-slate-300"} ${status.isActive?"text-black font-semibold":""} `].join(' ')}>
@@ -21,13 +21,7 @@ function Sidebar() {
                     }}
                 </NavLink>
         </div>
-
-        {/* <div className='container'>
-            <h3 className='text-slate-500 '>RECENT SONGS </h3>
-        </div> */}
-
         <Playercom />
-
     </div>
   )
 }

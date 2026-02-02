@@ -50,13 +50,17 @@ function Header() {
 
   return (
     <header>
-    <div className='container w-full'>
-        <div className=' flex gap-32'>
-            <nav className=' h-16 flex gap-16 items-center justify-center '>
+    <div className='container-div '>
+        <div className='flex flex-col-reverse gap-3 md:flex-row md:gap-10 lg:gap-28'>
+           <div className='absolute top-24 left-12 z-0 md:relative md:top-0 '>
+             <nav className=' h-16 flex  items-center md:justify-center   
+               gap-1 sm:gap-2 md:gap-10 lg:gap-16 xl:gap-20
+               text-lg sm:text-xl md:text-2xl 
+            '>
                 <NavLink to='/'>
                     {(status)=>{
                         return <span
-                        className={[`text-2xl tracking-widest p-3 px-6 rounded-full ${status.isActive?"text-black":"text-white"} ${status.isActive?"bg-white":"bg-black"} `].join(' ')}>
+                        className={` tracking-widest p-3 px-6 rounded-full ${status.isActive?"text-black bg-white":"text-white bg-black"}`}>
                         All
                         </span>
                     }}
@@ -64,7 +68,7 @@ function Header() {
                 <NavLink to='Music'>
                     {(status)=>{
                         return <span
-                        className={[`text-2xl tracking-widest p-3 px-6  rounded-full ${status.isActive?"text-black":"text-white"} ${status.isActive?"bg-white":"bg-black"} `].join(' ')}>
+                        className={` tracking-widest p-3 px-6 rounded-full ${status.isActive?"text-black bg-white":"text-white bg-black"}`}>
                         Music
                         </span>
                     }}
@@ -72,16 +76,31 @@ function Header() {
                 <NavLink to='Podcast'>
                     {(status)=>{
                         return <span
-                        className={[`text-2xl tracking-widest p-3  px-6  rounded-full ${status.isActive?"text-black":"text-white"} ${status.isActive?"bg-white":"bg-black"} `].join(' ')}>
+                        className={` tracking-widest p-3 px-6 rounded-full ${status.isActive?"text-black bg-white":"text-white bg-black"}`}>
                         Podcast
                         </span>
                     }}
                 </NavLink>
             </nav>
-            <div onFocus={focusfuntion} onBlur={blurfuntion} className={`${searchfoucs?' w-[45rem] h-auto rounded-3xl':'w-[35rem] rounded-full h-14 '}  bg-white   flex items-center justify-center flex-col`}>
-                <div className={`${searchfoucs?'rounded-3xl':'rounded-full' } h-16 flex items-center  border-solid border-b-2  border-black `}>
-                <input  ref={search} onChange={handleClick} className={`${searchfoucs?' w-[40rem]':'w-[30rem] '} h-14  rounded-l-full p-4 px-8 text-2xl bg-white placeholder:text-slate-400`} type="text" placeholder='Search' />
-                <button onClick={searched} className='h-14 w-[5rem] rounded-r-full p-4 text-3xl bg-white text-slate-400 flex items-center justify-center hover:text-black'>
+
+           </div>
+
+            <div className='relative z-10'>
+                <div 
+            onFocus={focusfuntion} 
+            onBlur={blurfuntion} 
+            className={`${searchfoucs?' md:w-[90%]  lg:w-[40rem] xl:w-[45rem]  rounded-3xl ':' w-[95%] mx-auto md:w-[90%] lg:w-[40rem] xl:w-[45rem]  rounded-full '} h-auto bg-white   flex items-center justify-center flex-col  `}>
+                <div 
+                className={`${searchfoucs?'rounded-3xl border-b-2 border-solid border-black':'rounded-full' } w-full h-16 flex items-center  `}>
+               
+                <input  
+                ref={search} 
+                onChange={handleClick} 
+                className={`w-[80%] md:w-[85%] lg:w-[90%] h-14  rounded-l-full p-4 px-8 text-2xl bg-white placeholder:text-slate-400 `} type="text" placeholder='Search' />
+
+                <button 
+                onClick={searched} 
+                className='h-14 w-[20%] md:w-[15%] lg:w-[10%] text-3xl rounded-r-full p-4  bg-white text-slate-400 flex items-center justify-center hover:text-black'>
                     <CiSearch />
                 </button>
                 </div>
@@ -101,6 +120,7 @@ function Header() {
                 })}
 
 
+            </div>
             </div>
         </div>
     </div>

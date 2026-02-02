@@ -22,7 +22,7 @@ function LikeFunction({data}) {
 
   return (
     <>
-    <span className='text-[2.5rem] bg-white text-white' onClick={()=>{
+    <span className=' bg-white text-white' onClick={()=>{
      addorremove()
     }}>
     {arrLiked.some((data)=>data.id == id && data.type == type)?<FcLike />:<PiHeartThin />}  

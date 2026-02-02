@@ -49,7 +49,7 @@ function App() {
         }
       ]
     }
-  ], { basename: '/musicplayer' })
+  ])
   return <RouterProvider router={Router}></RouterProvider>
 }
 
