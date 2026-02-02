@@ -15,10 +15,10 @@ function Applayout() {
     <div className='h-auto main-con m-auto flex flex-col 2xl:flex-row 2xl:w-[1272px]'> 
 
     <div className='w-full 2xl:w-[75%] h-[100%]'>
-        <div className='h-[14vh] md:h-[10vh] relative z-10 '>
+        <div className='h-[16vh] md:h-[10vh] relative z-10 '>
             <Header />
         </div>
-        <div className='  content-section h-[74vh] sm:h-[71vh] md:h-[72vh] 2xl:h-[90vh] overflow-y-auto   '>
+        <div className='  content-section h-[72vh] sm:h-[69vh] md:h-[72vh] 2xl:h-[90vh] overflow-y-auto   '>
              <div className='relative mt-5 2xl:hidden '>
                <NavLink to='YourLibrary'>
                     {(status)=>{
