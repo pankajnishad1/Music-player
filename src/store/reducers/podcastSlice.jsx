@@ -17,7 +17,7 @@ const initialState = {
       type:'Podcast',
       image:'/images/_jodhpur-mysterious_sound.jpg',
       audioName:'JODHPUR Mysterious Sound 2012',
-      audio:'/podcast/JODHPUR Mysterious Sound 2012 _ "The Strange Worldwide Sound" [4K] [VSXtRuPyies].mp3',
+      audio:'/podcast/JODHPUR Mysterious Sound 2012 _ “The Strange Worldwide Sound” [4K] [VSXtRuPyies].mp3',
       artist:'badmash icon'
     },
       
