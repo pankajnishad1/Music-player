@@ -57,8 +57,9 @@ function Header() {
                gap-1 sm:gap-2 md:gap-10 lg:gap-16 xl:gap-20
                text-lg sm:text-xl md:text-2xl 
             '>
-                <NavLink to='/'>
+                <NavLink to='All'>
                     {(status)=>{
+                        console.log(status.isActive)
                         return <span
                         className={` tracking-widest p-3 px-6 rounded-full ${status.isActive?"text-black bg-white":"text-white bg-black"}`}>
                         All
