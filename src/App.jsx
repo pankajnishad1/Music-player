@@ -13,12 +13,12 @@ import Searchpage from './pages/Searchpage';
 function App() {
   const Router = createBrowserRouter([
     {
-      path:'/Music-player/',
+      path:'/',
       element: <Applayout />,
       errorElement:<Errorpage/>,
       children:[
         {
-          path:'All',
+          path:'/',
           element:<All />
         },
         {
